@@ -7,11 +7,11 @@
 - 参数的差异性。
 - 主要特征:
 - a.基础特征:
-       1).主要包括prefix/title/max_query_prediction_keys相似度的系列特征, 对于一系列的统计list的数学统计特征, 分别统计list中的最大/最小
+       - 1).主要包括prefix/title/max_query_prediction_keys相似度的系列特征, 对于一系列的统计list的数学统计特征, 分别统计list中的最大/最小
     均值/标准差/众数等等;
-       2).转换率特征, 关于prefix/title/tag的相关转换率以及组合的一些转换率, 统计的时候用了一些简单的sample trick, 防止过拟合;
-       3).点击特征, 统计关于prefix/title/tag的单个点击以及组合的点击特征;
-       4).统计nunique特征, 例如prefix下有多少个title等等类似的特征;
+       - 2).转换率特征, 关于prefix/title/tag的相关转换率以及组合的一些转换率, 统计的时候用了一些简单的sample trick, 防止过拟合;
+       - 3).点击特征, 统计关于prefix/title/tag的单个点击以及组合的点击特征;
+       - 4).统计nunique特征, 例如prefix下有多少个title等等类似的特征;
 - b.countvector特征:对于prefix/title/query_prediction用cv变换成词的稀疏矩阵输入进模型一起训练, 另外还有prefix下包括哪些tag字符串的countvector;
 ### 2.哪部分是开源的
   在utility文件中, 有一些功能函数, 例如计算两个字符串间的各种相似度, 以及转换率平滑函数HyperParam, 都是开源的
